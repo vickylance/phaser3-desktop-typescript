@@ -1,0 +1,46 @@
+{
+  "name": "phaser3-desktop",
+  "version": "1.0.0",
+  "description": "A simple Phaser 3 Game development environment for Electron",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "electron ./dist/main.js",
+    "dev": "cross-env NODE_ENV=dev concurrently -n TSC,ELECTRON \"npm run watch\" \"nodemon --exec \"\"electron ./dist/main.js\"\"\""
+  },
+  "keywords": [
+    "phaser 3",
+    "electron",
+    "typescript",
+    "game",
+    "development"
+  ],
+  "author": {
+    "name": "Vignesh S",
+    "email": "vignesh6993@live.in",
+    "url": "https://www.vickylance.com"
+  },
+  "homepage": "https://www.vickylance.com",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "cross-env": "^6.0.3",
+    "electron": "^7.1.7",
+    "electron-builder": "^21.2.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "phaser": "^3.21.0"
+  },
+  "build": {
+    "appId": "com.vickylance.phaser3-desktop",
+    "productName": "Phaser 3 Desktop",
+    "copyright": "Copyright © year 2019-2020 Vignesh S (vickylance)"
+  }
+}
